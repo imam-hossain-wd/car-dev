@@ -15,12 +15,12 @@ const Navbar = () => {
                     <h1 className='text-3xl font-bold text-rose-500'>Car Dev</h1>
                 </div>
                 <ul className='hidden lg:flex'>
-                    <li className='mr-5'><a href="/home">Home</a></li>
-                    <li className='mr-5'><a href="/home">Service</a></li>
-                    <li className='mr-5'><a href="/home">Blog</a></li>
-                    <li className='mr-5'><a href="/home">Contact</a></li>
-                    <li className='mr-5'><a href="/home">Booking</a></li>
-                    <li className='mr-5'><a href="/home">About us</a></li>
+                    <li className='mr-5 hover:text-indigo-600'><a href="/home">Home</a></li>
+                    <li className='mr-5 hover:text-indigo-600'><a href="/home">Service</a></li>
+                    <li className='mr-5 hover:text-indigo-600'><a href="/home">Blog</a></li>
+                    <li className='mr-5 hover:text-indigo-600'><a href="/home">Contact</a></li>
+                    <li className='mr-5 hover:text-indigo-600'><a href="/home">Booking</a></li>
+                    <li className='mr-5 hover:text-indigo-600'><a href="/home">About us</a></li>
                 </ul>
                 <p onClick={() => toggleMenu()} className='block lg:hidden text-2xl'>
                     {!menuOpen ? <FaBars /> : <FaTimes />}

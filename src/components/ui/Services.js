@@ -41,7 +41,7 @@ const services = [
             <h1 className="text-center text-xl">Our Services</h1>
             <p className='w-[50%] text-2xl font-bold text-center mx-auto'>WE PROVIDE PROFESSIONAL SERVICES</p>
 
-            <div className='grid grid-cols-3 mt-10 gap-5 container mx-auto'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-5 container ml-20 mx-auto'>
                 {services && services.map((service, index) => (
                     <div key={index} style={{backgroundColor:"#F8F8F8"}} className='flex rounded flex-col items-center w-[300px]'>
                         <div>

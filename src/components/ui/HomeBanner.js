@@ -17,7 +17,7 @@ const HomeBanner = () => {
                     </a>
 
                     <a href={`tel:${phoneNumber}`} className="-ml-20">
-                        <button className='w-40 h-30 text-4xl hover:text-red-400  rounded mt-4'><FaPhone /></button>
+                        <button className='w-40 h-30 text-4xl text-green-500 hover:text-green-700  rounded mt-4'><FaPhone /></button>
                     </a>
                 </div>
                 <button className='bg-green-400 px-7 w-60 mx-auto py-2 font-bold rounded mt-3'>Get Service</button>

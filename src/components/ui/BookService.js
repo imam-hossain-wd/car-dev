@@ -1,10 +1,10 @@
 /* eslint-disable @next/next/no-img-element */
-import React from 'react';
+
 import styles from '@/styles/BookService.module.css'
 
 const BookService = () => {
     return (
-        <div className='m-10 flex justify-around'>
+        <div id="booking" className='m-10 flex flex-col lg:flex-row justify-around'>
             <div>
             <h1 className='text-2xl font-bold'>Get A <span className='text-red-700'>Service Now!</span></h1>
             <p className='my-2'>Lorem ipsum dolor sit amet, consectetur adipisicing <br /> elit. Enim labore iure repellendus quasi nobis.</p>
@@ -28,10 +28,10 @@ const BookService = () => {
                 <textarea className="textarea textarea-bordered border border-gray-400 focus:outline-none w-60 h-32 mb-4" placeholder="Tell me Your Probelm"></textarea>
                  <br/>
 
-                <input type='submit' className='bg-neavyBlue py-1 px-10  text-white ' />
+                <input type='submit' className='bg-neavyBlue py-2 rounded font-semibold hover:bg-neavyBlueHover px-10  text-white ' />
             </form>
             </div>
-            <div className={`${styles.imageContainer}`}>
+            <div className={`${styles.imageContainer} mt-8 lg:mt-0`}>
             <img className="bg-black " src="https://i.ibb.co/YhYK8Vs/booking.png" alt="car servicing" />
             </div>
 

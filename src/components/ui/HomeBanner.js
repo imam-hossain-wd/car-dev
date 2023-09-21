@@ -1,29 +1,43 @@
 /* eslint-disable @next/next/no-img-element */
 import { FaPhone, FaWhatsapp } from 'react-icons/fa';
-
+import Link from 'next/link'
 const HomeBanner = () => {
 
     const phoneNumber = '+1234567890';
     return (
 
-        <div className='flex justify-around items-center mt-10'>
+        <div id="home" className='flex flex-col-reverse lg:flex-row justify-around items-center mt-10'>
             <div className=''>
                 <h1 className='text-4xl font-bold'>Welcome to Car Service</h1>
-                <p className='text-lg font-semi-bold font-semibold'>Quality car maintenance and repairs</p>
+                <p className='text-lg mt-2 ml-7 font-semi-bold font-semibold'>Quality car maintenance and repairs</p>
 
-                <div className=''>
-                    <a href={`https://wa.me/${phoneNumber}`} className="ml-10">
-                        <button className='w-40 h-30 text-4xl text-green-500 hover:text-green-700 rounded mt-4'><FaWhatsapp /></button>
-                    </a>
+                <div className='flex justify-around mt-5 '>
+                    <Link href={`tel:${phoneNumber}`}>
+                        <button className="flex text-white items-center w-40 hover:bg-red-600  transition rounded duration-200 p-2 bg-red-500 font-bold ">
+                            <span className='text-xl mr-2 ml-4'> <FaPhone /></span> Call Now
+                        </button>
+                    </Link>
 
-                    <a href={`tel:${phoneNumber}`} className="-ml-20">
-                        <button className='w-40 h-30 text-4xl text-green-500 hover:text-green-700  rounded mt-4'><FaPhone /></button>
-                    </a>
+                    <Link href={`https://wa.me/${phoneNumber}`}>
+                        <button className="flex text-white items-center w-40 hover:bg-green-600 transition rounded duration-500 p-2 bg-green-500 font-bold ">
+                            <span className='text-xl mr-2 ml-4'> <FaWhatsapp /></span> Whatsapp
+                        </button>
+                    </Link>
                 </div>
-                <button className='bg-green-400 px-7 w-60 mx-auto py-2 font-bold rounded mt-3 hover:bg-green-500 transition'>Get Service</button>
-            </div>
+                    <Link href={`tel:${phoneNumber}`}>
+                        <button className="flex hover:text-white items-center w-40 hover:bg-red-500 z-10 fixed left-5 bottom-5 transition rounded-full duration-200 p-2 bg-red-500 font-bold ">
+                            <span className='text-xl mr-2 ml-4'> <FaPhone /></span> Call Now
+                        </button>
+                    </Link>
+
+                    <Link href={`https://wa.me/${phoneNumber}`}>
+                        <button className="flex hover:text-white items-center w-40 hover:bg-green-500 z-10 fixed right-5 bottom-5 transition rounded-full duration-200 p-2 bg-green-500 font-bold ">
+                            <span className='text-xl mr-2 ml-4'> <FaWhatsapp /></span> Whatsapp
+                        </button>
+                    </Link>
+                </div>
             <div>
-                <img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuH1kCsOUV1I5OPnLiEC069-BT84RAQPSLyw&usqp=CAU' className='w-[500px] h-80' alt=''/>
+                <img src='https://i.ibb.co/nDc28mg/banner.png' className='w-[100%] h-72 lg:h-96 mb-10 lg:mb-0' alt='' />
             </div>
         </div>
 

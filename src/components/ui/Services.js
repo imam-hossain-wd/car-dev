@@ -37,7 +37,7 @@ const services = [
   
 
     return (
-        <div className='mt-10'>
+        <div smooth id="service" className='mt-10'>
             <h1 className="text-center text-xl">Our Services</h1>
             <p className='w-[50%] text-2xl font-bold text-center mx-auto'>WE PROVIDE PROFESSIONAL SERVICES</p>
 

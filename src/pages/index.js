@@ -5,6 +5,9 @@ import HomeBanner from '@/components/ui/HomeBanner'
 import Services from '@/components/ui/Services'
 import BookService from '@/components/ui/BookService'
 import Footer from '@/components/ui/Footer'
+import About from '@/components/ui/About'
+import Product from '@/components/ui/Product'
+
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,7 +18,9 @@ export default function Home() {
    <Navbar />
    <HomeBanner />
    <Services/>
+   <Product/>
    <BookService />
+   <About/>
    <Footer/>
 
    </div>

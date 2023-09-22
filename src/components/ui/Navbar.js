@@ -67,7 +67,7 @@ const Navbar = () => {
                         <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isAbout ? "active text-red-400" : ""}`}>
                             <Link href="#about">About</Link>
                         </li>
-                        <li className={`mr-5 ${isProduct ? "active text-red-400" : ""}`}>
+                        <li className={`ml-5 block lg:hidden ${isProduct ? "active text-red-400" : ""}`}>
                             <Link href="#product">Product</Link>
                         </li>
                         <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isContact ? "active text-red-400" : ""}`}>

@@ -7,6 +7,7 @@ import BookService from '@/components/ui/BookService'
 import Footer from '@/components/ui/Footer'
 import About from '@/components/ui/About'
 import Product from '@/components/ui/Product'
+import Contact from '@/components/ui/Contact'
 
 
 
@@ -21,6 +22,7 @@ export default function Home() {
    <Product/>
    <BookService />
    <About/>
+   <Contact/>
    <Footer/>
 
    </div>

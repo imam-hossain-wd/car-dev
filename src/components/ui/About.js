@@ -1,9 +1,50 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable @next/next/no-img-element */
 import React from 'react';
 
 const About = () => {
     return (
-        <div smooth id="about">
-            this is about page
+        <div smooth id="about" className='container mx-auto my-10'>
+            
+           <h1 className='text-center font-semibold text-2xl mb-5'>About us</h1>
+           <div className='flex flex-col  lg:flex-row justify-between'>
+                <div className='relative text-white  z-10'>
+                    <h1 className='absolute font-bold top-0 right-0'><span className='text-6xl'>10</span> <span className='text-3xl'>Years <br/> Experience</span> </h1>
+                    <img src='https://i.ibb.co/LPyv1Vd/engine-oil-changing.png'  alt=''/>
+                </div>
+                <div className='mt-10 lg:mt-0 ml-10'>
+                    <h1 className='text-4xl font-bold mb-5'><span className='text-red-700'>CarDev</span> Is The Best Place For <br/> Your Auto Car</h1>
+                    <p>Tempor erat elitr rebum at clita. Diam dolor diam <br/> ipsum sit. Aliqu diam amet diam et eos. Clita <br/> erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet</p>
+
+                    <div className='flex items-center  mt-5 '>
+                        <div className='bg-gray-200 w-12 h-12 flex justify-center items-center mr-4'>
+                            <p className='font-bold text-lg'>01</p>
+                        </div>
+                        <div>
+                            <h3 className='font-bold text-lg'>Professional & Expert</h3>
+                            <p>Diam dolor diam ipsum sit amet diam et eos</p>
+                        </div>
+                    </div>
+                    <div className='flex items-center  mt-5'>
+                        <div className='bg-gray-200 w-12 h-12 flex justify-center items-center mr-4'>
+                            <p className='font-bold text-lg'>02</p>
+                        </div>
+                        <div>
+                            <h3 className='font-bold text-lg '>Quality Servicing Center</h3>
+                            <p>Diam dolor diam ipsum sit amet diam et eos</p>
+                        </div>
+                    </div>
+                    <div className='flex items-center  mt-5'>
+                        <div className='bg-gray-200 w-12 h-12 flex justify-center items-center mr-4'>
+                            <p className='font-bold text-lg'>03</p>
+                        </div>
+                        <div>
+                            <h3 className='font-bold text-lg '>Awards Winning Workers</h3>
+                            <p>Diam dolor diam ipsum sit amet diam et eos</p>
+                        </div>
+                    </div>
+                </div>
+           </div>
         </div>
     );
 };

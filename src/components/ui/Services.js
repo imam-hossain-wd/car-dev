@@ -1,6 +1,11 @@
 /* eslint-disable @next/next/no-img-element */
 
+import { useState } from "react";
+import Model from "../shared/Model";
+
 const Services = () => {
+
+  const [serviceData, setServiceData] = useState('')
 
 const services = [
     {
@@ -37,25 +42,26 @@ const services = [
   
 
     return (
-        <div smooth id="service" className='mt-10'>
+        <div  id="service" className='mt-10'>
             <h1 className="text-center text-xl">Our Services</h1>
             <p className='w-[50%] text-2xl font-bold text-center mx-auto'>WE PROVIDE PROFESSIONAL SERVICES</p>
 
-            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-5 container ml-20 mx-auto'>
+            <div className='grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-10 gap-5 container ml-16 mx-auto'>
                 {services && services.map((service, index) => (
-                    <div key={index} style={{backgroundColor:"#F8F8F8"}} className='flex rounded flex-col items-center w-[300px]'>
-                        <div>
-                            <img className='w-80 h-60' src={service.image_url} alt={service.name} />
+                    <div key={index} style={{backgroundColor:"#F8F8F8"}} className='flex rounded drop-shadow-2xl flex-col items-center w-[350px] p-5 border-2'>
+                        <div className="">
+                            <img className='w-96 h-52  rounded' src={service.image_url} alt={service.name} />
                         </div>
                         <div>
                             <h1 className="text-lg font-bold m-2">{service.name}</h1>
                             <p>{service.description.slice(0,80)} <span className="text-red-400">Read more...</span></p>
                         </div>
-                        <button className="text-white p-1 mt-2 bg-neavyBlue hover:bg-neavyBlueHover rounded hover:transition">Get Service</button>
-                       
+                                        
+                        <button onClick={() => { setServiceData(service); document.getElementById('my_modal_1').showModal(); }} className="text-white p-2 px-5 mt-2 bg-orange-500  hover:bg-neavyBlueHover rounded hover:transition">Get Service</button>                    
                     </div>
                 ))}
             </div>
+            <Model serviceData={serviceData}/>
         </div>
     );
 };

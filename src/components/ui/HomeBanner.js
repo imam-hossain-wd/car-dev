@@ -5,21 +5,20 @@ const HomeBanner = () => {
 
     const phoneNumber = '+1234567890';
     return (
-
         <div id="home" className='flex flex-col-reverse lg:flex-row justify-around items-center mt-10'>
-            <div className=''>
-                <h1 className='text-4xl font-bold'>Welcome to Car Service</h1>
-                <p className='text-lg mt-2 ml-7 font-semi-bold font-semibold'>Quality car maintenance and repairs</p>
+            <div className='w-full lg:w-[38%]'>
+                <h1 className='text-3xl text-center lg:text-4xl  -mt-5 font-bold'>Your On-Demand Car Savior <br/> <span className=' text-red-600'> Anywhere, Anytime!</span></h1>
+                <p className='text-lg mt-4 text-center bg-gray-300 font-semi-bold font-semibold'>Quality car maintenance and repairs</p>
 
-                <div className='flex justify-around mt-5 '>
+                <div className='flex flex-col lg:flex-row items-center justify-center mt-5 '>
                     <Link href={`tel:${phoneNumber}`}>
-                        <button className="flex text-white items-center w-40 hover:bg-red-600  transition rounded duration-200 p-2 bg-red-500 font-bold ">
-                            <span className='text-xl mr-2 ml-4'> <FaPhone /></span> Call Now
+                        <button className="flex text-white items-center w-40 hover:bg-red-600  transition rounded duration-200 p-2 bg-red-500 font-bold ml-0 lg:mr-2">
+                            <span className='text-xl  mr-2 ml-4'> <FaPhone /></span> Call Now
                         </button>
                     </Link>
 
                     <Link href={`https://wa.me/${phoneNumber}`}>
-                        <button className="flex text-white items-center w-40 hover:bg-green-600 transition rounded duration-500 p-2 bg-green-500 font-bold ">
+                        <button className="flex mt-2 lg:mt-0 text-white items-center w-40 hover:bg-green-600 transition rounded duration-500 p-2 bg-green-500 font-bold ml-0 lg:ml-2">
                             <span className='text-xl mr-2 ml-4'> <FaWhatsapp /></span> Whatsapp
                         </button>
                     </Link>

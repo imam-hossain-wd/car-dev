@@ -6,8 +6,6 @@ import { useRouter } from "next/router";
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
-
-    const phoneNumber = '+1234567890';
     const router = useRouter();
 
     const isAbout = router.asPath === "/#about";
@@ -67,7 +65,7 @@ const Navbar = () => {
                         <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isAbout ? "active text-red-400" : ""}`}>
                             <Link href="#about">About</Link>
                         </li>
-                        <li className={`ml-5 block lg:hidden ${isProduct ? "active text-red-400" : ""}`}>
+                        <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isAbout ? "active text-red-400" : ""}`}>
                             <Link href="#product">Product</Link>
                         </li>
                         <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isContact ? "active text-red-400" : ""}`}>

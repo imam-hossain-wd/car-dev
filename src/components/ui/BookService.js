@@ -1,24 +1,32 @@
 /* eslint-disable @next/next/no-img-element */
 
-import styles from '@/styles/BookService.module.css'
-
 
 const BookService = () => {
     
     return (
-        <div id="booking" className='m-10 flex flex-col lg:flex-row justify-around'>
+        <div id="booking" className="mt-10">
+           <style jsx>
+            {`
+            .whiteInput input,select,textarea{
+                background:white;
+            }       
+            `}
+           </style>
+
+            <div className="flex flex-col lg:flex-row justify-around items-center">
+
+            <div className="bg-white p-5 drop-shadow-2xl">
             <div>
-                <h1 className='text-2xl font-bold'>Get A <span className='text-red-700'>Service Now!</span></h1>
-                <p className='my-2'>Lorem ipsum dolor sit amet, consectetur adipisicing <br /> elit. Enim labore iure repellendus quasi nobis.</p>
+            <h1 className='text-2xl text-center md:text-center  font-bold -mt-2 mb-2'>Get A <span className='text-red-700  '>Service Now!</span></h1>
+            </div>
+            <form className='w-full lg:w-[450px] whiteInput'>
+                    <input type='text' className='border w-full border-gray-400 focus:outline-none  p-2 mt-3' placeholder='Enter Name' /> 
+                    <input type='email' className='border w-full  border-gray-400 focus:outline-none  mt-3  p-2' placeholder='Email' /> 
 
-                <form>
-                    <input type='text' className='border border-gray-400 focus:outline-none w-96 p-2 mt-3' placeholder='Enter Name' /> <br />
-                    <input type='text' className='border border-gray-400 focus:outline-none w-96 mt-3  p-2' placeholder='Email' /> <br />
+                    <input type='tel' className='border  border-gray-400 focus:outline-none w-full  mt-3 p-2' placeholder='Phone' /> 
 
-                    <input type='tel' className='border border-gray-400 focus:outline-none w-96 mt-3 p-2' placeholder='Phone' /> <br />
-
-                    <input type='text' className='border border-gray-400 focus:outline-none w-96 mt-3 p-2' placeholder='Address' /> <br />
-                    <select className="select border border-gray-400 focus:outline-none p-2 w-96 mt-3">
+                    <input type='text' className='border  border-gray-400 focus:outline-none w-full  mt-3 p-2' placeholder='Address' /> 
+                    <select className="select border w-[48%]  border-gray-400 focus:outline-none p-2 mr-4  mt-3">
                         <option disabled selected>Select Your vehicle model</option>
                         <option>Toyota</option>
                         <option>Jeep</option>
@@ -27,9 +35,9 @@ const BookService = () => {
                         <option>Land Rover</option>
                         <option>Land Lexus</option>
                         <option>Mazda</option>
-                    </select> <br />
+                    </select> 
 
-                    <select className="select border border-gray-400 focus:outline-none p-2 w-96 mt-3">
+                    <select className="select w-[48%] border border-gray-400 focus:outline-none p-2  mt-3">
                         <option disabled selected>Select Your Service</option>
                         <option>Bettery</option>
                         <option>washing</option>
@@ -39,16 +47,23 @@ const BookService = () => {
                         <option>Color Repair</option>
                         <option>Service</option>
                     </select> <br />
-                    <input type='date' className='border border-gray-400 focus:outline-none w-96 mt-3  p-2' placeholder='Reservation Date' /> <br />
+                    <input type='date' className='border w-full border-gray-400 focus:outline-none  mt-3  p-2' placeholder='Reservation Date' /> <br />
 
-                    <textarea className="textarea textarea-bordered border border-gray-400 focus:outline-none w-60 h-32 mt-3" placeholder="Tell me Your Probelm"></textarea>
+                    <textarea className="textarea textarea-bordered border border-gray-400  focus:outline-none w-full h-24 mt-3" placeholder="Describe service"></textarea>
                     <br />
-                   <input type='submit' className='bg-neavyBlue py-2 rounded font-semibold hover:bg-neavyBlueHover px-10 w-40 mt-2  text-white ' />
+                  <div className='flex justify-center'>
+                  <button type="submit" className='bg-neavyBlue py-2 rounded font-semibold text-white hover:bg-neavyBlueHover px-10 transition duration-500 w-48 mt-2 '> Submit</button>
+                  </div>
                 </form>
             </div>
-            <div className={`${styles.imageContainer} mt-8 lg:mt-0`}>
-                <img className="bg-black " src="https://i.ibb.co/YhYK8Vs/booking.png" alt="car servicing" />
+            <div className=" mt-8 lg:mt-0 drop-shadow-2xl bg-white p-5 rounded">
+                <img className="w-[650px] h-[500px]" src="https://i.ibb.co/cyxmq4p/brake-disc-1749633-1920.jpg" alt="car servicing" />
             </div>
+
+
+
+            </div>
+
 
         </div>
     );

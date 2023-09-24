@@ -8,19 +8,21 @@ import Footer from '@/components/ui/Footer'
 import About from '@/components/ui/About'
 import Product from '@/components/ui/Product'
 import Contact from '@/components/ui/Contact'
+import Carousel from '@/components/ui/Carousel'
 
 
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({products}) {
   return (
    <div className='bg-white text-black'>
    <Navbar />
    <HomeBanner />
    <Services/>
-   <Product/>
+   <Product products={products}/>
    <BookService />
+   <Carousel/>
    <About/>
    <Contact/>
    <Footer/>
@@ -28,3 +30,15 @@ export default function Home() {
    </div>
   )
 }
+
+export async function getStaticProps() {
+
+  const res = await fetch('https://car-dev-backend.vercel.app/products')
+  const products = await res.json()
+  return {
+    props: {
+      products,
+    },
+  }
+}
+

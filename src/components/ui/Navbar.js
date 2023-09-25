@@ -21,7 +21,8 @@ const Navbar = () => {
     };
 
     return (
-        <header className="sticky top-0 z-50 bg-white shadow-md  mb-2 ">
+      <section className='relative z-50'>
+          <header className="fixed top-0 left-0 right-0  bg-white shadow-md mb-2">
             <nav className='flex justify-between p-4 w-[90%] mx-auto'>
                 <div className='flex items-center'>
                     <img className='w-10 h-10 rounded-full' src='https://i.ibb.co/863c3CY/car-service-logo.jpg' alt='car service logo' />
@@ -65,7 +66,7 @@ const Navbar = () => {
                         <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isAbout ? "active text-red-400" : ""}`}>
                             <Link href="/#about">About</Link>
                         </li>
-                        <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isAbout ? "active text-red-400" : ""}`}>
+                        <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isProduct ? "active text-red-400" : ""}`}>
                             <Link href="/#product">Product</Link>
                         </li>
                         <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isContact ? "active text-red-400" : ""}`}>
@@ -78,6 +79,7 @@ const Navbar = () => {
                 }
             </nav>
         </header>
+      </section>
 
     );
 };

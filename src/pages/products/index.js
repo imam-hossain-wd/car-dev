@@ -5,7 +5,7 @@ import React from 'react';
 
 const products = ({productDatas}) => {
     return (
-        <div className='my-10'>
+        <div className='my-10 overflow-x-hidden'>
             <h1 className='text-center text-2xl font-bold mb-5'>Our All Kinds of Products</h1>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-[85%] mx-auto '>
                 {

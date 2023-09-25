@@ -36,7 +36,7 @@ Home.getLayout = function getLayout(page) {
 }
 
 export async function getStaticProps() {
-  const productRes = await fetch(`${process.env.URL}/products`);
+  const productRes = await fetch(`${process.env.URL}/products/?limit=6`);
   const productService = await productRes.json();
 
 console.log(productService, 'product service');

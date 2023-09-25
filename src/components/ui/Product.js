@@ -1,7 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
-import React from 'react';
-
 const Product = ({products}) => {
 
 //   https://i.ibb.co/Kh5LY1k/wheel.png
@@ -30,7 +28,7 @@ const Product = ({products}) => {
                             <h2 className='text-lg mt-2 mb-1 font-bold text-center'>{product.name}</h2>
                             <p>{product.description.slice(0, 100)}</p>
                            <div className='flex justify-center mt-5'>
-                           <Link href={`/product/${product._id}`}>
+                           <Link href={`/products/${product._id}`}>
                            <button className='text-md font-bold bg-neavyBlue py-2 px-5 text-white w-36  rounded'>Check Out</button>
                            </Link>
                            </div>
@@ -40,7 +38,9 @@ const Product = ({products}) => {
                 }
               </div>
             </div>
-
+            <div className='flex justify-center items-center'>
+              <Link href="/products" className='bg-neavyBlue text-white px-5 py-2 font-semibold hover:bg-neavyBlueHover m-5 rounded'>All Products</Link>
+            </div>
         </div>
     );
 };

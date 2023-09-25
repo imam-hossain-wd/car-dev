@@ -13,13 +13,12 @@ import Contact from '@/components/ui/Contact'
 
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home({products}) {
-  console.log(products, 'pppp');
+export default function Home({products, services}) {
   return (
    <div className='bg-white overflow-x-auto  text-black'>
    <Navbar />
    <HomeBanner />
-   <Services/>
+   <Services services={services}/>
    <Product products={products}/>
    <BookService />
    <About/>
@@ -31,14 +30,20 @@ export default function Home({products}) {
 }
 
 export async function getStaticProps() {
+  const productRes = await fetch(`${process.env.URL}/products`);
+  const productService = await productRes.json();
 
-  const res = await fetch(`${process.env.URL}/product`)
-  console.log(res, 'rrrr');
-  const products = await res.json()
+console.log(productService, 'product service');
+  const serviceRes = await fetch(`${process.env.URL}/services`);
+  const serviceData = await serviceRes.json();
+
   return {
     props: {
-      products,
+      products: productService,
+      services: serviceData,
     },
-  }
+  };
 }
+
+
 

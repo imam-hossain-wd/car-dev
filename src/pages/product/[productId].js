@@ -4,8 +4,7 @@ import Link from "next/link";
 import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
 const CheckOut = ({ product }) => {
-
-  const { image_url, name, description } = product?.data;
+    const { image_url, name, description } = product;
 
   const phoneNumber = '+1234567890';
   return (
@@ -33,6 +32,7 @@ const CheckOut = ({ product }) => {
         </div>
       </div>
     </div>
+   
   );
 };
 
@@ -41,10 +41,10 @@ export default CheckOut;
 
 export const getStaticPaths = async () => {
 
-  const res = await fetch(`${process.env.URL}/product`);
+  const res = await fetch(`${process.env.URL}/products`);
   const products = await res.json();
 
-  const paths = products.data.map((product) => ({
+  const paths = products.map((product) => ({
     params: { productId: product._id },
   }));
   return { paths, fallback: false };
@@ -53,7 +53,7 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async (context) => {
   const { params } = context;
   const { productId } = params;
-  const res = await fetch(`${process.env.URL}/product/?id=${productId}`);
+  const res = await fetch(`${process.env.URL}/product/${productId}`);
   const product = await res.json();
   return {
     props: {
@@ -61,3 +61,14 @@ export const getStaticProps = async (context) => {
     },
   };
 };
+// export const getStaticProps = async (context) => {
+//   const { params } = context;
+//   const { productId } = params;
+//   const res = await fetch(`${process.env.URL}/product/?id=${productId}`);
+//   const product = await res.json();
+//   return {
+//     props: {
+//       product,
+//     },
+//   };
+// };

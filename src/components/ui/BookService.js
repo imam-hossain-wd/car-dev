@@ -26,7 +26,7 @@ const BookService = () => {
                     <input type='tel' className='border  border-gray-400 focus:outline-none w-full  mt-3 p-2' placeholder='Phone' /> 
 
                     <input type='text' className='border  border-gray-400 focus:outline-none w-full  mt-3 p-2' placeholder='Address' /> 
-                    <select className="select border w-[48%]  border-gray-400 focus:outline-none p-2 mr-4  mt-3">
+                    <select className="select border w-full md:w-[48%] lg:w-[48%]  border-gray-400 focus:outline-none p-2 mr-4  mt-3">
                         <option disabled selected>Select Your vehicle model</option>
                         <option>Toyota</option>
                         <option>Jeep</option>
@@ -37,7 +37,7 @@ const BookService = () => {
                         <option>Mazda</option>
                     </select> 
 
-                    <select className="select w-[48%] border border-gray-400 focus:outline-none p-2  mt-3">
+                    <select className="select w-full md:w-[48%] lg:w-[48%]  border border-gray-400 focus:outline-none p-2  mt-3">
                         <option disabled selected>Select Your Service</option>
                         <option>Bettery</option>
                         <option>washing</option>

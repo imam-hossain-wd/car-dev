@@ -10,18 +10,18 @@ const Model = ({serviceData}) => {
     return (
         <div>
             <dialog id="my_modal_1" className="modal rounded">
-                <div className="modal-box bg-white w-[320px] h-[420px] p-2">
+                <div className="modal-box bg-white w-[320px] h-[412px] p-2">
                 <div>
                     <div className='flex justify-center mb-2'>
-                    <img className='w-full h-40 rounded' src={serviceData.image_url} alt='service photo'/>
+                    <img className='w-full h-44 rounded' src={serviceData.image_url} alt='service photo'/>
                     </div>
                     <h2 className='text-md text-center bg-gray-200 rounded font-bold'>{serviceData.name}</h2>
                     <h2 className='text-md text-center font-semibold my-2'>24/7 On-Demand Car Battery Replacement & Repair – Anywhere, Just Call or WhatsApp with Your Location</h2>
                 </div>
 
-                    <div className='flex items-center justify-around mt-2'>
+                    <div className='flex items-center justify-evenly mt-2'>
                         <Link className='' href={`tel:${phoneNumber}`}>
-                            <button className="flex hover:text-white items-center w-28 hover:bg-red-500 transition rounded duration-200 p-1 bg-red-500 font-bold ">
+                            <button className="flex text-white items-center w-28 hover:bg-neavyBlueHover transition rounded duration-200 p-1 bg-neavyBlue font-bold ">
                                 <span className='text-[12px] mr-[5px] ml-2'> <FaPhone /></span> Call Now
                             </button>
                         </Link> <br />
@@ -35,7 +35,7 @@ const Model = ({serviceData}) => {
                     <div className="modal-action -mb-2">
                         <form method="dialog">
                           <div className='flex justify-end'>
-                          <button className=" py-1 mt-3 px-5 rounded bg-red-500 text-white border-0">Close</button>
+                          <button className=" py-1 mt-3 px-5 rounded hover:bg-red-600 bg-red-500 text-white border-0">Close</button>
                           </div>
                         </form>
                     </div>

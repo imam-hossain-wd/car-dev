@@ -30,23 +30,23 @@ const Navbar = () => {
                 <div className='flex items-center'>
                     <ul className='hidden lg:flex'>
 
-                        <li className={`mr-5 ${isHome ? "active text-red-400" : ""}`}><Link href="#home">Home</Link></li>
+                        <li className={`mr-5 ${isHome ? "active text-red-400" : ""}`}><Link href="/#home">Home</Link></li>
 
-                        <li className={`mr-5 ${isService ? "active text-red-400" : ""}`}><Link href="#service">Service</Link></li>
+                        <li className={`mr-5 ${isService ? "active text-red-400" : ""}`}><Link href="/#service">Service</Link></li>
 
                         <li className={`mr-5 ${isProduct ? "active text-red-400" : ""}`}>
-                            <Link href="#product">Product</Link>
+                            <Link href="/#product">Product</Link>
                         </li>
 
                         <li className={`mr-5 ${isAbout ? "active text-red-400" : ""}`}>
-                            <Link href="#about">About</Link>
+                            <Link href="/#about">About</Link>
                         </li>
                       
                         <li className={`mr-5 ${isContact ? "active text-red-400" : ""}`}>
-                            <Link href="#contact">Contact</Link>
+                            <Link href="/#contact">Contact</Link>
                         </li>
                         <li className={`mr-5 ${isBooking ? "active text-red-400" : ""}`}>
-                            <Link href="#booking">Booking</Link>
+                            <Link href="/#booking">Booking</Link>
                         </li>
 
                     </ul>
@@ -58,21 +58,21 @@ const Navbar = () => {
             <nav>
                 {
                     menuOpen && <ul className='flex flex-col lg:top-[-500px] transition-all ease-in duration-700'>
-                        <li  onClick={() => toggleMenu(!menuOpen)}  className={`ml-5 mb-1 block md:block lg:hidden duration-500 ${isHome ? "active text-red-400" : ""}`}><Link href="#home">Home</Link></li>
+                        <li  onClick={() => toggleMenu(!menuOpen)}  className={`ml-5 mb-1 block md:block lg:hidden duration-500 ${isHome ? "active text-red-400" : ""}`}><Link href="/#home">Home</Link></li>
 
-                        <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isService ? "active text-red-400" : ""}`}><Link href="#service">Service</Link></li>
+                        <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isService ? "active text-red-400" : ""}`}><Link href="/#service">Service</Link></li>
 
                         <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isAbout ? "active text-red-400" : ""}`}>
-                            <Link href="#about">About</Link>
+                            <Link href="/#about">About</Link>
                         </li>
                         <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isAbout ? "active text-red-400" : ""}`}>
-                            <Link href="#product">Product</Link>
+                            <Link href="/#product">Product</Link>
                         </li>
                         <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isContact ? "active text-red-400" : ""}`}>
-                            <Link href="#contact">Contact</Link>
+                            <Link href="/#contact">Contact</Link>
                         </li>
                         <li onClick={() => toggleMenu(!menuOpen)} className={`ml-5 mb-1 block md:block lg:hidden ${isBooking ? "active text-red-400" : ""}`}>
-                            <Link href="#booking">Booking</Link>
+                            <Link href="/#booking">Booking</Link>
                         </li>
                     </ul>
                 }

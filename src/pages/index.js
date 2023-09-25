@@ -1,12 +1,13 @@
 import { Inter } from 'next/font/google'
-import Navbar from '@/components/ui/Navbar'
+// import Navbar from '@/components/ui/Navbar'
 import HomeBanner from '@/components/ui/HomeBanner'
 import Services from '@/components/ui/Services'
 import BookService from '@/components/ui/BookService'
-import Footer from '@/components/ui/Footer'
+// import Footer from '@/components/ui/Footer'
 import About from '@/components/ui/About'
 import Product from '@/components/ui/Product'
 import Contact from '@/components/ui/Contact'
+import RootLayout from '@/components/Layout/RootLayout'
 
 
 
@@ -16,16 +17,21 @@ const inter = Inter({ subsets: ['latin'] })
 export default function Home({products, services}) {
   return (
    <div className='bg-white overflow-x-auto  text-black'>
-   <Navbar />
    <HomeBanner />
    <Services services={services}/>
    <Product products={products}/>
    <BookService />
    <About/>
    <Contact/>
-   <Footer/>
-
    </div>
+  )
+}
+
+Home.getLayout = function getLayout(page) {
+  return (
+    <RootLayout>
+      {page}
+    </RootLayout>
   )
 }
 

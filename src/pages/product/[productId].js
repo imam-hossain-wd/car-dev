@@ -1,5 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 
+import RootLayout from "@/components/Layout/RootLayout";
 import Link from "next/link";
 import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
@@ -8,7 +9,7 @@ const CheckOut = ({ product }) => {
 
   const phoneNumber = '+1234567890';
   return (
-    <div className="bg-white text-black mt-10">
+      <div className="bg-white text-black mt-10">
       <h1 className="text-center font-bold text-3xl mb-5 ">welcome to CheckOut page </h1>
       <div className="flex flex-col items-center justify-center bg-white drop-shadow-2xl w-full lg:w-[600px] p-5 mx-auto">
         <div>
@@ -31,12 +32,20 @@ const CheckOut = ({ product }) => {
           </Link>
         </div>
       </div>
-    </div>
-   
+    </div> 
   );
 };
 
 export default CheckOut;
+
+CheckOut.getLayout = function getLayout(page) {
+  return (
+    <RootLayout>
+      {page}
+    </RootLayout>
+  )
+}
+
 
 
 export const getStaticPaths = async () => {

@@ -6,17 +6,17 @@ const Model = ({serviceData}) => {
     console.log(serviceData, 'mmmm');
     console.log(serviceData.image_url, 'mmmm');
 
-    const phoneNumber = '+1234567890';
+    const phoneNumber = '+971568703512';
     return (
         <div>
-            <dialog id="my_modal_1" className="modal ">
-                <div className="modal-box bg-white w-[300px] h-[400px] p-5">
+            <dialog id="my_modal_1" className="modal rounded">
+                <div className="modal-box bg-white w-[320px] h-[420px] p-2">
                 <div>
                     <div className='flex justify-center mb-2'>
-                    <img className='w-full h-36 rounded' src={serviceData.image_url} alt='service photo'/>
+                    <img className='w-full h-40 rounded' src={serviceData.image_url} alt='service photo'/>
                     </div>
-                    <h2 className='text-md font-bold'>{serviceData.name}</h2>
-                    <h2 className='text-md font-semibold my-2'>24/7 On-Demand Car Battery Replacement & Repair – Anywhere, Just Call or WhatsApp with Your Location</h2>
+                    <h2 className='text-md text-center bg-gray-200 rounded font-bold'>{serviceData.name}</h2>
+                    <h2 className='text-md text-center font-semibold my-2'>24/7 On-Demand Car Battery Replacement & Repair – Anywhere, Just Call or WhatsApp with Your Location</h2>
                 </div>
 
                     <div className='flex items-center justify-around mt-2'>
@@ -34,7 +34,9 @@ const Model = ({serviceData}) => {
                     </div>
                     <div className="modal-action -mb-2">
                         <form method="dialog">
-                            <button className=" py-1 mt-2 px-5 rounded bg-red-500 text-white border-0">Close</button>
+                          <div className='flex justify-end'>
+                          <button className=" py-1 mt-3 px-5 rounded bg-red-500 text-white border-0">Close</button>
+                          </div>
                         </form>
                     </div>
                 </div>

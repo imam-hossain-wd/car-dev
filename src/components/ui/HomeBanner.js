@@ -1,9 +1,9 @@
 /* eslint-disable @next/next/no-img-element */
-import { FaPhone, FaWhatsapp } from 'react-icons/fa';
+import { FaLongArrowAltUp, FaPhone, FaRegArrowAltCircleUp, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link'
 const HomeBanner = () => {
 
-    const phoneNumber = '+1234567890';
+    const phoneNumber = '+971568703512';
     return (
         <div id="home" className='flex w-full flex-col-reverse lg:flex-row justify-around items-center mt-10'>
             <div className='w-full lg:w-[38%]'>
@@ -23,6 +23,15 @@ const HomeBanner = () => {
                         </button>
                     </Link>
                 </div>
+
+                    {/* fa arrow */}
+                    <Link href="#home">
+                        <button className=" animate-bounce   z-10 fixed right-5  text-indigo-600 bottom-16 text-3xl transition rounded-full duration-500 p-2 ">
+                        <FaRegArrowAltCircleUp />
+                        
+                        </button>
+                    </Link>
+
                     <Link href={`tel:${phoneNumber}`}>
                         <button className="flex hover:text-white items-center w-40 hover:bg-red-500 z-10 fixed left-5 bottom-5 transition rounded-full duration-200 p-2 bg-red-500 font-bold ">
                             <span className='text-xl mr-2 ml-4'> <FaPhone /></span> Call Now

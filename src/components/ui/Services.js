@@ -11,8 +11,10 @@ const Services = ({services}) => {
 
     return (
         <div  id="service" className='mt-10'>
-            <h1 className="text-center text-xl font-bold">Our Services</h1>
+          <div className="flex flex-col justify-center items-center">
+          <h1 className="text-center text-xl font-bold p-1 bg-gray-300 w-60">Our Services</h1>
             <p className=' text-2xl font-bold text-center mb-10'>WE PROVIDE PROFESSIONAL SERVICES</p>
+          </div>
 
             <div className=''>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-[85%] mx-auto'>

@@ -15,9 +15,9 @@ const Product = ({products}) => {
         <div id='product'>
             <div>
 
-              <div className='text-center my-8'>
-              <h1 className=' text-2xl font-semibold '>Our Products</h1>
-                <p className='text-lg font-semibold'>Our products is one of the best product is Dubai</p>
+              <div className='text-center my-8 flex flex-col justify-center items-center '>
+              <h1 className=' text-xl font-bold w-60 bg-gray-300 p-1 mb-2 '>Our Products</h1>
+                <p className='text-2xl font-bold '>Our products is one of the best product is Dubai</p>
               </div>
 
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-[85%] mx-auto '>

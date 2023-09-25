@@ -3,6 +3,8 @@ import Link from 'next/link';
 import React from 'react';
 
 const Product = ({products}) => {
+
+  console.log(products, 'products');
 //   https://i.ibb.co/Kh5LY1k/wheel.png
 // https://i.ibb.co/G2sPJMg/part1.png
 // https://i.ibb.co/Y240TSh/part2.png
@@ -58,10 +60,10 @@ const Product = ({products}) => {
                 <p className='text-lg font-semibold'>Our products is one of the best product is Dubai</p>
               </div>
 
-              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 '>
+              <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-[85%] mx-auto '>
                 {
-                    products && products.map((product, index)=> (
-                        <div className='w-96 rounded-lg p-5 drop-shadow-2xl' key={index} style={{backgroundColor:"#F3F4F6"}} >
+                    products && products.data.map((product, index)=> (
+                        <div className='w-[350px] rounded-lg p-5 drop-shadow-2xl' key={index} style={{backgroundColor:"#F3F4F6"}} >
                             <img className='w-80 h-60 mx-auto' src={product.image_url} alt='Product'/>
                             <h2 className='text-lg mt-2 mb-1 font-bold text-center'>{product.name}</h2>
                             <p>{product.description.slice(0, 100)}</p>

@@ -1,5 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
 
+
+import Image from "next/image";
 import { useForm } from "react-hook-form";
 
 
@@ -148,7 +149,7 @@ const BookService = () => {
                     </form>
                 </div>
                 <div className=" mt-8 lg:mt-0 drop-shadow-2xl bg-white p-5 rounded">
-                    <img className="w-[650px] h-[500px]" src="https://i.ibb.co/cyxmq4p/brake-disc-1749633-1920.jpg" alt="car servicing" />
+                    <Image className="w-[650px] h-[500px]" src="https://i.ibb.co/cyxmq4p/brake-disc-1749633-1920.jpg" width={500} height={500} alt="car repair and servicing" />
                 </div>
 
 

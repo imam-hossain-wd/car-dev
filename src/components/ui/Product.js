@@ -1,35 +1,26 @@
-/* eslint-disable @next/next/no-img-element */
+
+import Image from 'next/image';
 import Link from 'next/link';
 const Product = ({products}) => {
-
-//   https://i.ibb.co/Kh5LY1k/wheel.png
-// https://i.ibb.co/G2sPJMg/part1.png
-// https://i.ibb.co/Y240TSh/part2.png
-// https://i.ibb.co/f9qht68/part3.png
-// https://i.ibb.co/dWd1Pn9/part4.png
-// https://i.ibb.co/J5hp0j0/part5.png
-
-
 
     return (
         <div id='product'>
             <div>
 
               <div className='text-center my-8 flex flex-col justify-center items-center '>
-              <h1 className=' text-xl font-bold w-60 bg-gray-300 p-1 mb-2 '>Our Products</h1>
-                <p className='text-2xl font-bold '>Our products is one of the best product is Dubai</p>
+              <h1 className=' text-xl font-bold px-3 bg-gray-300 p-2 mb-2 '>Upgrade Your Ride with Our Products</h1>
               </div>
 
               <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 w-[85%] mx-auto '>
                 {
                     products && products.map((product, index)=> (
                         <div className='w-[350px] rounded-lg p-5 drop-shadow-2xl' key={index} style={{backgroundColor:"#F3F4F6"}} >
-                            <img className='w-80 h-60 mx-auto' src={product.image_url} alt='Product'/>
+                            <Image className='w-80 h-60 mx-auto' src={product.image_url} width={500} height={500} alt={product.alt} />
                             <h2 className='text-lg mt-2 mb-1 font-bold text-center'>{product.name}</h2>
                             <p>{product.description.slice(0, 100)}</p>
                            <div className='flex justify-center mt-5'>
                            <Link href={`/products/${product._id}`}>
-                           <button className='text-md font-bold bg-neavyBlue py-2 px-5 text-white w-36  rounded'>Check Out</button>
+                           <button className='text-md font-bold bg-neavyBlue hover:bg-neavyBlueHover duration-500 py-2 px-5 text-white w-36  rounded'>Check Out</button>
                            </Link>
                            </div>
 

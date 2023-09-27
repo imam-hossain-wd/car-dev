@@ -1,4 +1,6 @@
-/* eslint-disable @next/next/no-img-element */
+
+import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 import { FaEnvelope, FaFacebook, FaGoogle, FaPhoneAlt, FaWhatsapp } from 'react-icons/fa';
 
@@ -10,7 +12,7 @@ const Footer = () => {
                     <div>
                         <div className=''>
                             <div className='flex items-center'>
-                            <img className='w-14 h-14 rounded-full' src='https://i.ibb.co/863c3CY/car-service-logo.jpg' alt='car service logo' />
+                            <Image className='w-14 h-14 rounded-full' src="https://i.ibb.co/863c3CY/car-service-logo.jpg" width={500} height={500} alt="car service logo" />
                                 <h3 className='text-xl hover:text-red-500 ml-2 font-semibold '>Car <span className='text-red-400 '>Workshop</span></h3>
                             </div>
                             <div className='flex my-4'>
@@ -46,7 +48,7 @@ const Footer = () => {
                         <div>
                             <div className='flex items-center mb-1 hover:text-red-500'>
                                 <h4><FaPhoneAlt /> </h4>
-                                <p className='ml-2'>013137333</p>
+                                <Link href="tel:971568703512" className='ml-2'>+971568703512</Link>
                             </div>
                             <div className='flex items-center hover:text-red-500'>
                                 <h4><FaEnvelope /> </h4>

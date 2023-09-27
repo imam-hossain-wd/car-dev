@@ -2,10 +2,8 @@
 import Link from 'next/link';
 import React from 'react';
 import { FaPhone, FaWhatsapp } from 'react-icons/fa';
-const Model = ({serviceData}) => {
-    console.log(serviceData, 'mmmm');
-    console.log(serviceData.image_url, 'mmmm');
 
+const Model = ({serviceData}) => {
     const phoneNumber = '+971568703512';
     return (
         <div>

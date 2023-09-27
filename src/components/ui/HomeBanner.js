@@ -1,9 +1,11 @@
-/* eslint-disable @next/next/no-img-element */
+
 import { FaLongArrowAltUp, FaPhone, FaRegArrowAltCircleUp, FaWhatsapp } from 'react-icons/fa';
 import Link from 'next/link'
+import Image from 'next/image';
 const HomeBanner = () => {
 
     const phoneNumber = '+971568703512';
+    
     return (
         <div id="home" className='flex w-full flex-col-reverse lg:flex-row justify-around items-center mt-10'>
             <div className='w-full lg:w-[38%]'>
@@ -45,7 +47,7 @@ const HomeBanner = () => {
                     </Link>
                 </div>
             <div>
-                <img src='https://i.ibb.co/nDc28mg/banner.png' className='w-[100%] h-72 lg:h-96 mb-10 lg:mb-0' alt='' />
+                <Image className='w-[100%] h-72 lg:h-96 mb-10 lg:mb-0' src="https://i.ibb.co/nDc28mg/banner.png" width={500} height={500} alt="Car Repair and servicing"/>
             </div>
         </div>
 

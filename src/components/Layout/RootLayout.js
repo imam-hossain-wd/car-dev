@@ -4,7 +4,7 @@ import Footer from '../ui/Footer';
 
 const RootLayout = ({ children }) => {
     return (
-        <div className='bg-white text-black'>
+        <div className='bg-white text-black overflow-hidden'>
             <Navbar />
             <main>{children}</main>
             <Footer />

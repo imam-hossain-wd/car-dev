@@ -1,19 +1,18 @@
-/* eslint-disable @next/next/no-img-element */
-
 import RootLayout from "@/components/Layout/RootLayout";
+import Image from "next/image";
 import Link from "next/link";
 import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
 const CheckOut = ({ product }) => {
-    const { image_url, name, description } = product;
+    const { image_url, name, description,alt } = product;
 
   const phoneNumber = '+1234567890';
   return (
-      <div className="bg-white text-black mt-10">
-      <h1 className="text-center font-bold text-3xl mb-5 ">welcome to CheckOut page </h1>
+      <div className="bg-white mt-28 mb-10">
+      <h1 className="text-center font-bold text-3xl mb-5">Welcome to Checkout page </h1>
       <div className="flex flex-col items-center justify-center bg-white drop-shadow-2xl w-full lg:w-[600px] p-5 mx-auto">
-        <div>
-          <img className="w-full lg:w-[450px] rounded" src={image_url} alt="product" />
+        <div className="w-[60%] h-[300px] mb-5">
+          <Image src={image_url} width={500} height={500} alt={alt}/>
         </div>
         <p className="text-2xl font-bold my-2">{name}</p>
         <p>{description}</p>
@@ -70,14 +69,3 @@ export const getStaticProps = async (context) => {
     },
   };
 };
-// export const getStaticProps = async (context) => {
-//   const { params } = context;
-//   const { productId } = params;
-//   const res = await fetch(`${process.env.URL}/product/?id=${productId}`);
-//   const product = await res.json();
-//   return {
-//     props: {
-//       product,
-//     },
-//   };
-// };

@@ -1,8 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
+
 import Link from 'next/link';
 import React, {  useEffect, useState } from 'react';
 import { FaBars, FaPhone, FaTimes, FaWhatsapp } from 'react-icons/fa';
 import { useRouter } from "next/router";
+import Image from 'next/image';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -25,7 +26,7 @@ const Navbar = () => {
           <header className="fixed top-0 left-0 right-0  bg-white shadow-md mb-2">
             <nav className='flex justify-between p-4 w-[90%] mx-auto'>
                 <div className='flex items-center'>
-                    <img className='w-10 h-10 rounded-full' src='https://i.ibb.co/863c3CY/car-service-logo.jpg' alt='car service logo' />
+      <Image className='w-10 h-10 rounded-full' src="https://i.ibb.co/863c3CY/car-service-logo.jpg'" width={500} height={500} alt="car service logo" />
                     <h1 className='text-3xl font-bold text-black'>Car <span className='text-red-700'>Dev</span></h1>
                 </div>
                 <div className='flex items-center'>

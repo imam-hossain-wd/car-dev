@@ -1,9 +1,7 @@
 import { Inter } from 'next/font/google'
-// import Navbar from '@/components/ui/Navbar'
 import HomeBanner from '@/components/ui/HomeBanner'
 import Services from '@/components/ui/Services'
 import BookService from '@/components/ui/BookService'
-// import Footer from '@/components/ui/Footer'
 import About from '@/components/ui/About'
 import Product from '@/components/ui/Product'
 import Contact from '@/components/ui/Contact'
@@ -39,8 +37,7 @@ export async function getStaticProps() {
   const productRes = await fetch(`${process.env.URL}/products/?limit=6`);
   const productService = await productRes.json();
 
-console.log(productService, 'product service');
-  const serviceRes = await fetch(`${process.env.URL}/services`);
+  const serviceRes = await fetch(`${process.env.URL}/services/?limit=6`);
   const serviceData = await serviceRes.json();
 
   return {

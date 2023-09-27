@@ -12,7 +12,7 @@ const products = ({productDatas}) => {
                 {
                     productDatas && productDatas.map((product)=> (
                         <div className='w-[350px] rounded-lg p-5 drop-shadow-2xl' key={product._id} style={{backgroundColor:"#F3F4F6"}} >
-                            <Image className='w-96 h-60' src={product.image_url} width={300} height={300} alt={product.alt} />
+                            <Image className='w-[300px] h-[200px]' src={product.image_url} width={300} height={300} alt={product.alt} />
                             <h2 className='text-lg mt-2 mb-1 font-bold text-center'>{product.name}</h2>
                             <p>{product.description.slice(0, 100)}</p>
                            <div className='flex justify-center mt-5'>

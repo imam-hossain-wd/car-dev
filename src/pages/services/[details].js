@@ -8,16 +8,16 @@ const ServiceDetails = ({data}) => {
   const phoneNumber = '+971568703512';
   
     return (
-        <div className="bg-white mt-28 mb-10">
-      <h1 className="text-center font-bold text-3xl mb-5">Welcome to Service Details Page </h1>
-      <div className="flex flex-col items-center justify-center bg-white drop-shadow-2xl w-full lg:w-[600px] p-5 mx-auto">
-        <div className="w-[60%] h-[300px]">
-          <img src={data?.image_url} alt={data?.name}/>
+        <div className="bg-white mt-24 mb-10">
+      <h1 className="text-center font-bold text-2xl mb-4">Welcome to Service Details Page </h1>
+      <div className="flex flex-col items-center justify-center bg-white drop-shadow-2xl w-full lg:w-[700px] p-5 mx-auto">
+        <div className="">
+          <img className="w-full  lg:w-[560px] h-[300px]" src={data?.image_url} alt={data?.name}/>
         </div>
         <p className="text-2xl font-bold my-2">{data?.name}</p>
         <p>{data?.description}</p>
 
-        <div className='flex flex-col lg:flex-row items-center justify-center mt-5 '>
+        <div className='flex flex-col md:flex-row lg:flex-row items-center justify-center mt-5 '>
           <Link href={`tel:${phoneNumber}`}>
             <button className="flex text-white items-center w-40 hover:bg-red-600  transition rounded duration-200 p-2 bg-red-500 font-bold ml-0 lg:mr-2">
               <span className='text-xl  mr-2 ml-4'> <FaPhone /></span> Call Now

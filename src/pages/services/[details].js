@@ -1,47 +1,43 @@
-/* eslint-disable @next/next/no-img-element */
+import Servicewrapper from "@/components/ui/serviceDescription/Servicewrapper";
+import Head from "next/head";
 
-import Link from "next/link";
-import { FaPhone, FaWhatsapp } from "react-icons/fa";
 
-const ServiceDetails = ({data}) => {
+const ServiceDetails = ({ service }) => {
+  return (
+    <section className="mt-24">
 
-  const phoneNumber = '+971568703512';
-  
-    return (
-        <div className="bg-white mt-24 mb-10">
-      <h1 className="text-center font-bold text-2xl mb-4">Welcome to Service Details Page </h1>
-      <div className="flex flex-col items-center justify-center bg-white drop-shadow-2xl w-full lg:w-[700px] p-5 mx-auto">
-        <div className="">
-          <img className="w-full  lg:w-[560px] h-[300px]" src={data?.image_url} alt={data?.name}/>
-        </div>
-        <p className="text-2xl font-bold my-2">{data?.name}</p>
-        <p>{data?.description}</p>
-
-        <div className='flex flex-col md:flex-row lg:flex-row items-center justify-center mt-5 '>
-          <Link href={`tel:${phoneNumber}`}>
-            <button className="flex text-white items-center w-40 hover:bg-red-600  transition rounded duration-200 p-2 bg-red-500 font-bold ml-0 lg:mr-2">
-              <span className='text-xl  mr-2 ml-4'> <FaPhone /></span> Call Now
-            </button>
-          </Link>
-
-           <Link href={`https://wa.me/${phoneNumber}`}>
-             <button className="flex mt-2 lg:mt-0 text-white items-center w-40 hover:bg-green-600 transition rounded duration-500 p-2 bg-green-500 font-bold ml-0 lg:ml-2">
-               <span className='text-xl mr-2 ml-4'> <FaWhatsapp /></span> Whatsapp
-             </button>
-           </Link> 
-        </div>
+      <div className="w-96 mx-auto p-2 ">
+        <h3 className=" text-center text-xl  bg-gray-300 font-bold">
+          Revive Your Ride
+        </h3>
       </div>
-    </div> 
-    );
+      {<Servicewrapper service={service} />}
+    </section>
+  );
 };
 
 export default ServiceDetails;
 
-export async function getServerSideProps({params}) {
-  const {details} = params;
-  const res = await fetch(`https://car-dev-backend.vercel.app/service/${details}`);
-  const data = await res.json(); 
-  console.log(data);
-  return { props: { data } };
-}
+export const getStaticPaths = async () => {
+  const res = await fetch(`${process.env.URL}/services`);
+  const services = await res.json();
 
+  const paths = services.map((service) => ({
+    params: { details: service.title },
+  }));
+  return { paths, fallback: false };
+};
+
+export const getStaticProps = async (context) => {
+  const { params } = context;
+  const { details } = params;
+
+  const res = await fetch(`${process.env.URL}/service/${details}`);
+  const service = await res.json();
+  return {
+    props: {
+      service,
+    },
+    revalidate: 10,
+  };
+};

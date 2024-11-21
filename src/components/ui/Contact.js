@@ -34,12 +34,12 @@ const Contact = () => {
             `}
       </style>
       <div className=' flex justify-center'>
-        <h1 className='text-center w-60 p-1 font-bold text-2xl bg-gray-200 '>Contact us</h1>
+        <h4 className='text-center w-60 p-1 font-bold text-2xl bg-gray-200 '>Contact us</h4>
       </div>
 
       <div className='flex flex-col p-5 m-5 justify-around lg:flex-row'>
         <div className="relative text-right w-full  lg:w-[50%] h-[480px] bg-white drop-shadow-2xl border-2 p-5 rounded">
-          <div className="gmap_canvas ">
+          <div className="gmap_canvas">
             <iframe
               className="gmap_iframe"
               width="100%"
@@ -47,10 +47,11 @@ const Contact = () => {
               scrolling="no"
               marginHeight="0"
               marginWidth="0"
-              src="https://maps.google.com/maps?width=600&amp;height=400&amp;hl=en&amp;q=modunaghat&amp;t=&amp;z=18&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.019517120376!2d55.276455399999996!3d25.236267599999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x618e2df114dbe2ed%3A0xbbb3ac95640ff0da!2sSaiful%20Car%20Repair%20%26%20Battery%20fixing%20Dubai!5e0!3m2!1sen!2sbd!4v1716136939257!5m2!1sen!2sbd"
               title="Google Map"
             ></iframe>
-            <a href="https://connectionsgame.org/">Connections Unlimited</a>
+
+
           </div>
           <style>
             {`
@@ -68,7 +69,7 @@ const Contact = () => {
         </div>
         <div className='w-full  lg:w-[500px] h-full bg-white rounded p-10 border-2 drop-shadow-2xl mt-7 lg:mt-0 '>
           <div>
-            <h1 className='text-center font-bold text-xl -mt-3 -ml-3 text-orange-500 uppercase'>Get In Touch</h1>
+            <h2 className='text-center font-bold text-xl -mt-3 -ml-3 text-orange-500 uppercase'>Get In Touch</h2>
           </div>
           <form onSubmit={handleSubmit(contactHandler)} className='lg:ml-4 whiteInput'>
             <input

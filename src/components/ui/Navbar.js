@@ -27,7 +27,7 @@ const Navbar = () => {
             <nav className='flex justify-between p-4 w-[90%] mx-auto'>
                 <div className='flex items-center'>
       <Image className='w-10 h-10 rounded-full' src="https://i.ibb.co/863c3CY/car-service-logo.jpg'" width={500} height={500} alt="car service logo" />
-                    <h1 className='text-3xl font-bold text-black'>Car <span className='text-red-700'>Dev</span></h1>
+                    <h3 className='text-3xl font-bold text-black'>Car <span className='text-red-700'>Dev</span></h3>
                 </div>
                 <div className='flex items-center'>
                     <ul className='hidden lg:flex'>

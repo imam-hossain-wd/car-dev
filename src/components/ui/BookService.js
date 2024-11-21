@@ -48,7 +48,7 @@ const BookService = () => {
 
                 <div className="bg-white p-5 drop-shadow-2xl">
                     <div>
-                        <h1 className='text-2xl text-center md:text-center  font-bold -mt-2 mb-2'>Get A <span className='text-red-700  '>Service Now!</span></h1>
+                        <h3 className='text-2xl text-center md:text-center  font-bold -mt-2 mb-2'>Get A <span className='text-red-700  '>Service Now!</span></h3>
                     </div>
                     <form onSubmit={handleSubmit(onSubmit)} className='w-full lg:w-[450px] whiteInput'>
                         <input
@@ -89,7 +89,7 @@ const BookService = () => {
                             {...register("brand", { required: "Brand is required" })}
                             className="select border w-full  border-gray-400 focus:outline-none p-2 mr-4 mt-3"
                         >
-                            <option value="" disabled selected>
+                            <option defaultValue=" Select Your vehicle model" disabled selected>
                                 Select Your vehicle model
                             </option>
                             <option>Toyota</option>
@@ -109,7 +109,7 @@ const BookService = () => {
                             {...register("service_name", { required: "Service Name is required" })}
                             className="select border w-full  border-gray-400 focus:outline-none p-2 mr-4 mt-3"
                         >
-                            <option value="" disabled selected>
+                            <option defaultValue=" Select Your vehicle model" disabled selected>
                                 Select Your Service
                             </option>
                             <option>Bettery</option>
